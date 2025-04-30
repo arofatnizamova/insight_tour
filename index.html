@@ -10,70 +10,175 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link href=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css " rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header class="position-absolute z-2 left-0 top-0 w-100">
-        <nav class="navbar navbar-expand-lg w-100">
-            <div class="container">
-                <div class="row gx-0 justify-content-between w-100">
-                    <div class="col-lg-2">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <a href="index.html" class="navbar-brand">
-                                <img src="icons/logo.svg" alt="Logo" class="logo img-fluid">
-                            </a>
-                            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon main-page-toggler navbar-toggler-custom"></span>
-                            </button>
+    <div class="" style="background: url('images/bg-banner.png') no-repeat center/cover;">
+        <header>
+            <nav class="navbar navbar-expand-lg w-100">
+                <div class="container">
+                    <div class="row gx-0 justify-content-between w-100">
+                        <div class="col-lg-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="index.html" class="navbar-brand">
+                                    <img src="icons/logo.svg" alt="Logo" class="logo img-fluid">
+                                </a>
+                                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon main-page-toggler navbar-toggler-custom"></span>
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-10">
-                        <div class="w-100 h-100 d-flex align-items-center">
-                            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-                                <ul class="navbar-nav py-2 px-4  align-items-center h-100">
-                                    <li class="nav-item">
-                                        <a href="index.html" class="nav-link">
-                                            Главная
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="team.html" class="nav-link">Туры</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="projects.html" class="nav-link">О компании</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="clients.html" class="nav-link">Новости</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="contacts.html" class="nav-link">Отзывы</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="contacts.html" class="nav-link">Контакты</a>
-                                    </li>
-                                </ul>
-                                <ul class="navbar-nav list-inline mt-lg-0 mt-3 language-bar py-2 px-3 align-items-center justify-content-evenly">
-                                    <li class="inline-item">
-                                        <a href="#" class="nav-link nav-link-language">UZ</a>
-                                    </li>
-                                    <li class="inline-item">
-                                        <a href="#" class="nav-link active nav-link-language">РУ</a>
-                                    </li>
-                                    <li class="inline-item">
-                                        <a href="#" class="nav-link nav-link-language">EN</a>
-                                    </li>
-                                </ul>
+                        <div class="col-lg-10">
+                            <div class="w-100 h-100 d-flex align-items-center">
+                                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                                    <ul class="navbar-nav bg-blur py-2 px-4  align-items-center h-100">
+                                        <li class="nav-item">
+                                            <a href="index.html" class="nav-link">
+                                                Главная
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="team.html" class="nav-link">Туры</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="projects.html" class="nav-link">О компании</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="clients.html" class="nav-link">Новости</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="contacts.html" class="nav-link">Отзывы</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="contacts.html" class="nav-link">Контакты</a>
+                                        </li>
+                                    </ul>
+                                    <ul class="navbar-nav bg-blur list-inline mt-lg-0 mt-3 language-bar py-2 px-3 align-items-center justify-content-evenly">
+                                        <li class="inline-item">
+                                            <a href="#" class="nav-link nav-link-language">UZ</a>
+                                        </li>
+                                        <li class="inline-item">
+                                            <a href="#" class="nav-link active nav-link-language">РУ</a>
+                                        </li>
+                                        <li class="inline-item">
+                                            <a href="#" class="nav-link nav-link-language">EN</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </nav>
+        </header>
+        <section class="banner pb-5">
+            <h2 class="fs-title text-white text-center mt-5 fw-normal ">Открывайте <span class="fw-bold">новые <br>
+                горизонты</span> вместе с нами</h2>
+            <div class="container pt-5">
+                <div class="row gy-4">
+                    <div class="col-lg-4">
+                        <div class="w-100 h-100 text-white">
+                            <p class="fs-title-3 lh-1 text-lg-start text-center">Завораживающий тур на Мальдивы</p>
+                            <p class="fs-title-2 fw-bold lh-1 text-lg-start text-center">Июль 2025</p>
+                            <div class="px-4 bg-blur avatar-container py-1 mt-3 border">
+                                <ul class="avatar-list list-unstyled mb-0">
+                                    <li>
+                                        <img src="images/rewiew/1.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="images/rewiew/2.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="images/rewiew/1.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="images/rewiew/2.png" alt="">
+                                    </li>
+                                </ul>
+                                <span class="position-absolute avatar-span fw-light fs-span">300+ заявок</span>
+                            </div>
+                            <p class="opacity-50 fw-light fs-paragraph mt-3 text-balance">Lorem ipsum rhoncus facilisis tristique nulla augue dolor. Lorem ipsum rhoncus facilisis tristique nulla augue dolor. Lorem ipsum rhoncus facilisis tristique nulla augue dolor.</p>
+                            <div class="d-flex">
+                                <a href="#" class="btn btn-white me-3">Оставить заявку</a>
+                                <a href="#" class="btn btn-short btn-transparent"><i class="bi bi-arrow-up-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div id="image-slider" class="splide">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide" data-title="Тур на Мальдивы" data-text="Lorem ipsum rhoncus facilisis.">
+                                        <img src="images/tour-cards/1.png" class="rounded-4 object-fit-cover" />
+                                        <div class="caption px-lg-0 px-3 text-white mt-2">
+                                            <div class="d-flex">
+                                                <h2 class="caption-title">Тур на Мальдивы </h2><span class="ms-auto fs-6 opacity-50">5<i class="ms-1 bi bi-star-fill"></i></span>
+                                            </div>
+                                            <p class="caption-text fs-span opacity-50">Lorem ipsum rhoncus facilisis tristique nulla augue dolor.</p>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide " data-title="Тур в Египет" data-text="Откройте древние тайны пирамид.">
+                                        <img src="images/tour-cards/2.png" class="rounded-4 object-fit-cover" />
+                                        <div class="caption px-lg-0 px-3 text-white mt-2">
+                                            <div class="d-flex">
+                                                <h2 class="caption-title">Тур в Египет</h2><span class="ms-auto fs-6 opacity-50">5<i class="ms-1 bi bi-star-fill"></i></span>
+                                            </div>
+                                            <p class="caption-text fs-span opacity-50">Lorem ipsum rhoncus facilisis tristique nulla augue dolor.</p>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide " data-title="Отдых на Бали" data-text="Расслабьтесь у океана.">
+                                        <img src="images/tour-cards/3.png" class="rounded-4 object-fit-cover" />
+                                        <div class="caption px-lg-0 px-3 text-white mt-2">
+                                            <div class="d-flex">
+                                                <h2 class="caption-title">Тур в Египет</h2><span class="ms-auto fs-6 opacity-50">5<i class="ms-1 bi bi-star-fill"></i></span>
+                                            </div>
+                                            <p class="caption-text fs-span opacity-50">Lorem ipsum rhoncus facilisis tristique nulla augue dolor.</p>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide " data-title="Отдых на Бали" data-text="Расслабьтесь у океана.">
+                                        <img src="images/tour-cards/2.png" class="rounded-4 object-fit-cover" />
+                                        <div class="caption px-lg-0 px-3 text-white mt-2">
+                                            <div class="d-flex">
+                                                <h2 class="caption-title">Тур в Египет</h2><span class="ms-auto fs-6 opacity-50">5<i class="ms-1 bi bi-star-fill"></i></span>
+                                            </div>
+                                            <p class="caption-text fs-span opacity-50">Lorem ipsum rhoncus facilisis tristique nulla augue dolor.</p>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide" data-title="Отдых на Бали" data-text="Расслабьтесь у океана.">
+                                        <img src="images/tour-cards/3.png" class="rounded-4 object-fit-cover" />
+                                        <div class="caption px-lg-0 px-3 text-white mt-2">
+                                            <div class="d-flex">
+                                                <h2 class="caption-title">Тур в Египет</h2><span class="ms-auto fs-6 opacity-50">5<i class="ms-1 bi bi-star-fill"></i></span>
+                                            </div>
+                                            <p class="caption-text fs-span opacity-50">Lorem ipsum rhoncus facilisis tristique nulla augue dolor.</p>
+                                        </div>
+                                    </li>
+                                    <li class="splide__slide" data-title="Отдых на Бали" data-text="Расслабьтесь у океана.">
+                                        <img src="images/tour-cards/4.png" class="rounded-4 object-fit-cover" />
+                                        <div class="caption px-lg-0 px-3 text-white mt-2">
+                                            <div class="d-flex">
+                                                <h2 class="caption-title">Тур в Египет</h2><span class="ms-auto fs-6 opacity-50">5<i class="ms-1 bi bi-star-fill"></i></span>
+                                            </div>
+                                            <p class="caption-text fs-span opacity-50">Lorem ipsum rhoncus facilisis tristique nulla augue dolor.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="custom-progress mx-auto"></div>
+                    </div>
+                </div>
             </div>
-        </nav>
-    </header>
+        </section>
+    </div>
     <main>
-        <section class="banner" style="background: url('images/bg-banner.png') no-repeat center/cover;">
+        <section class="py-lg-5 py-3">
+            <div class="container">
+                <h3 class="fs-section-title text-lg-start text-center">Выберите понравившийся Вам тур</h3>
+            </div>
         </section>
     </main>
 
@@ -85,6 +190,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>
     <script src="main.js"></script>
 </body>
 
