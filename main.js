@@ -1,39 +1,62 @@
 $(document).ready(function() {
-    var splide = new Splide('#image-slider', {
-        type: 'loop',
-        perPage: 3,
-        focus: 0,
-        gap: '1rem',
-        autoplay: true,
-        interval: 4000,
-        pagination: false,
-        arrows: false,
-        breakpoints: {
-            1200: {
-                autoWidth: false,
-                perPage: 2,
-            },
-            500: {
-                autoWidth: false,
-                perPage: 1.2,
-            },
-            480: {
-                autoWidth: false,
-                perPage: 1,
-            },
-        },
+    $('.splide-slider').each(function() {
+        const slider = $(this);
+        const sliderElement = slider[0]; // Получаем DOM-элемент из jQuery-объекта
+
+        // Базовые настройки
+        const options = {
+            type: 'loop',
+            gap: '1rem',
+            autoplay: true,
+            arrows: slider.parent().find('.slider-prev, .slider-next').length ? 'container' : false,
+        };
+
+        let extraOptions = {};
+
+        if (slider.hasClass('image-slider')) {
+            extraOptions = {
+                focus: 0,
+                interval: 4000,
+                pagination: false,
+                perPage: 3, // Добавляем базовое значение
+                breakpoints: {
+                    1200: {
+                        perPage: 2,
+                    },
+                    500: {
+                        perPage: 1.2,
+                    },
+                    480: {
+                        perPage: 1,
+                    },
+                },
+            };
+        }
+
+        // Объединяем настройки
+        const finalOptions = {...options, ...extraOptions };
+
+        // Инициализация Splide
+        const splide = new Splide(sliderElement, finalOptions);
+
+        // Кастомные стрелки (если есть)
+        const prevArrow = slider.parent().find('.slider-prev')[0];
+        const nextArrow = slider.parent().find('.slider-next')[0];
+
+        if (prevArrow && nextArrow) {
+            splide.on('mounted', () => {
+                prevArrow.addEventListener('click', () => splide.go('-1'));
+                nextArrow.addEventListener('click', () => splide.go('+1'));
+            });
+        }
+
+        // Прогресс-бар
+        function updateCaptionAndProgress() {
+            const progress = ((splide.index + 1) / splide.length) * 100;
+            slider.find('.custom-progress').css('--progress', progress + '%');
+        }
+
+        splide.on('mounted move', updateCaptionAndProgress);
+        splide.mount();
     });
-
-    function updateCaptionAndProgress() {
-        var activeSlide = $(splide.Components.Slides.getAt(splide.index).slide);
-        var progress = ((splide.index + 1) / splide.length) * 100;
-        $('.custom-progress').css('--progress', progress + '%');
-    }
-
-    splide.on('mounted move', function() {
-        updateCaptionAndProgress();
-        hideLeftSlide();
-    });
-
-    splide.mount();
 });
