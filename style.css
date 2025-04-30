@@ -188,6 +188,13 @@ body {
     top: -10%;
 }
 
+.raiting {
+    top: 5%;
+    right: 5%;
+    background: white;
+    border-radius: 50px;
+}
+
 @media (max-width: 1400px) {
     .nav-link {
         padding-right: 15px !important;
@@ -225,15 +232,15 @@ body {
     .logo {
         width: 150px;
     }
-}
-
-@media (max-width: 576px) {
     .splide__slide img {
         width: 90%;
         margin: 0 auto;
         display: block;
-        height: 400px;
+        height: 300px;
     }
+}
+
+@media (max-width: 576px) {
     .image-slider .splide__slide {
         transform: unset;
     }

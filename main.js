@@ -47,6 +47,9 @@ $(document).ready(function() {
                     990: {
                         perPage: 2.3,
                     },
+                    582: {
+                        perPage: 1.5,
+                    },
                     480: {
                         perPage: 1,
                     },

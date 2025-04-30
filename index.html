@@ -185,7 +185,10 @@
                         <div class="splide__track">
                             <ul class="splide__list">
                                 <li class="splide__slide">
-                                    <div class="rounded-5 border-blue overflow-hidden">
+                                    <div class="rounded-5 border-blue position-relative overflow-hidden">
+                                        <span class="position-absolute raiting d-block fs-span py-1 px-3 text-blue">
+                                            5 <i class="ms-1 bi bi-star-fill"></i>
+                                        </span>
                                         <img src="images/tours/1.png" alt="" class="w-100 rounded-5 img-fluid object-fit-cover">
                                         <div class="py-2 px-3">
                                             <p class="fw-semibold fs-span mb-0">Тур на Мальдивы</p>
@@ -196,13 +199,16 @@
                                                     </span>
                                                 <span class="opacity-50">/ на персону</span>
                                                 </span>
-                                                <a href="#" class="d-block ms-auto cursor-pointer"><i class="fs-2 text-blue bi bi-arrow-up-right-circle-fill"></i></a>
+                                                <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="d-block ms-auto cursor-pointer"><i class="fs-2 text-blue bi bi-arrow-up-right-circle-fill"></i></a>
                                             </div>
                                         </div>
                                     </div>
                                 </li>
                                 <li class="splide__slide">
-                                    <div class="rounded-5 border-blue overflow-hidden">
+                                    <div class="rounded-5 border-blue position-relative overflow-hidden">
+                                        <span class="position-absolute raiting d-block fs-span py-1 px-3 text-blue">
+                                            5 <i class="ms-1 bi bi-star-fill"></i>
+                                        </span>
                                         <img src="images/tours/2.png" alt="" class="w-100 rounded-5 img-fluid object-fit-cover">
                                         <div class="py-2 px-3">
                                             <p class="fw-semibold fs-span mb-0">Тур на Мальдивы</p>
@@ -219,7 +225,10 @@
                                     </div>
                                 </li>
                                 <li class="splide__slide">
-                                    <div class="rounded-5 border-blue overflow-hidden">
+                                    <div class="rounded-5 border-blue position-relative overflow-hidden">
+                                        <span class="position-absolute raiting d-block fs-span py-1 px-3 text-blue">
+                                            5 <i class="ms-1 bi bi-star-fill"></i>
+                                        </span>
                                         <img src="images/tours/3.png" alt="" class="w-100 rounded-5 img-fluid object-fit-cover">
                                         <div class="py-2 px-3">
                                             <p class="fw-semibold fs-span mb-0">Тур на Мальдивы</p>
@@ -236,7 +245,10 @@
                                     </div>
                                 </li>
                                 <li class="splide__slide">
-                                    <div class="rounded-5 border-blue overflow-hidden">
+                                    <div class="rounded-5 border-blue position-relative overflow-hidden">
+                                        <span class="position-absolute raiting d-block fs-span py-1 px-3 text-blue">
+                                            5 <i class="ms-1 bi bi-star-fill"></i>
+                                        </span>
                                         <img src="images/tours/4.png" alt="" class="w-100 rounded-5 img-fluid object-fit-cover">
                                         <div class="py-2 px-3">
                                             <p class="fw-semibold fs-span mb-0">Тур на Мальдивы</p>
@@ -265,7 +277,24 @@
         </section>
     </main>
 
-
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.Marquee/1.6.0/jquery.marquee.min.js"></script>
     <script src="https://kit.fontawesome.com/ab16f4767e.js" crossorigin="anonymous"></script>
