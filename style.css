@@ -1,4 +1,6 @@
-:root {}
+:root {
+    --color-blue: #49ABC1;
+}
 
 body {
     font-family: 'Jost', sans-serif;
@@ -32,6 +34,10 @@ body {
     text-wrap: balance;
 }
 
+.text-blue {
+    color: var(--color-blue);
+}
+
 .bg-blur {
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(10px);
@@ -60,6 +66,10 @@ body {
     border: 1px solid white;
     border-radius: 50px;
     color: white;
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }
 
 
@@ -130,6 +140,11 @@ body {
     transition: background 0.3s ease;
 }
 
+.custom-progress.dark {
+    background: linear-gradient(to right, #000000bd var(--progress, 0%), #a1a1a1ab 0%);
+    width: 60%;
+}
+
 .caption-title {
     font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
 }
@@ -164,6 +179,15 @@ body {
     right: 1.5rem;
 }
 
+.border-blue {
+    border: 2px solid var(--color-blue);
+}
+
+.btn-box {
+    right: 2%;
+    top: -10%;
+}
+
 @media (max-width: 1400px) {
     .nav-link {
         padding-right: 15px !important;
@@ -188,6 +212,13 @@ body {
         width: fit-content;
         flex-direction: row;
     }
+    .btn-box {
+        right: unset;
+        top: unset;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+    }
 }
 
 @media (max-width: 768px) {
@@ -197,11 +228,11 @@ body {
 }
 
 @media (max-width: 576px) {
-    .image-slider .splide__slide img {
+    .splide__slide img {
         width: 90%;
         margin: 0 auto;
         display: block;
-        height: 450px;
+        height: 400px;
     }
     .image-slider .splide__slide {
         transform: unset;
