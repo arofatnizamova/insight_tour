@@ -1,5 +1,6 @@
 :root {
     --color-blue: #49ABC1;
+    --gradient:  linear-gradient(0deg, #49abc1 0%, rgba(48, 110, 124, 0.95) 49.12%, rgba(23, 47, 53, 0.05) 100%);
 }
 
 body {
@@ -213,6 +214,10 @@ body {
     background: white;
     border-radius: 50px;
 }
+.date{
+    top: 5%;
+    right: 5%;
+}
 .margin-top-custom{
     margin-top: -3rem;
 }
@@ -226,6 +231,13 @@ body {
 }
 .form-control::placeholder{
     color: rgba(255, 255, 255, 0.5);
+}
+.gradient-container-info{
+    bottom: 0;
+    background: var(--gradient);
+    left: 0;
+    height: 50%;
+    width: 100%;
 }
 @media (min-width: 576px) {
     .modal-dialog {
