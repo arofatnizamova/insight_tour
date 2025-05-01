@@ -55,6 +55,28 @@ $(document).ready(function() {
                     },
                 },
             };
+        }else if (slider.hasClass('reviews')) {
+            extraOptions = {
+                focus: 0,
+                interval: 4000,
+                pagination: false,
+                arrows: false,
+                perPage: 3, // Добавляем базовое значение
+                breakpoints: {
+                    1600: {
+                        perPage: 2.5,
+                    },
+                    990: {
+                        perPage: 2,
+                    },
+                    768: {
+                        perPage: 1.5,
+                    },
+                    480: {
+                        perPage: 1,
+                    },
+                },
+            };
         }
 
         // Объединяем настройки

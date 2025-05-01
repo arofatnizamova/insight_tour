@@ -1,6 +1,7 @@
 :root {
     --color-blue: #49ABC1;
     --gradient:  linear-gradient(0deg, #49abc1 0%, rgba(48, 110, 124, 0.95) 49.12%, rgba(23, 47, 53, 0.05) 100%);
+    --color-gray: #EEEEEE;
 }
 
 body {
@@ -23,6 +24,9 @@ body {
 }
 .fs-paragraph {
     font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+}
+.fs-paragraph-2{
+    font-size: clamp(0.875rem, 0.85rem + 0.125vw, 1rem);
 }
 
 .fs-section-title {
@@ -48,6 +52,9 @@ body {
 }
 .bg-blue{
     background: var(--color-blue);
+}
+.bg-gray{
+    background: var(--color-gray);
 }
 .w-fit-content {
     width: fit-content;
