@@ -7,7 +7,10 @@
 body {
     font-family: 'Jost', sans-serif;
 }
-
+a{
+    text-decoration: none;
+    color: inherit;
+}
 .fs-title {
     font-size: clamp(1.625rem, 0.825rem + 4vw, 5.625rem);
 }
@@ -322,5 +325,8 @@ body {
     }
     .w-sm-200{
         width: 200px;
+    }
+    .logo_footer{
+        width: 170px;
     }
 }
