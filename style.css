@@ -45,7 +45,9 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
-
+.bg-blue{
+    background: var(--color-blue);
+}
 .w-fit-content {
     width: fit-content;
 }
@@ -214,6 +216,17 @@ body {
 .margin-top-custom{
     margin-top: -3rem;
 }
+.form-control{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+    padding-left: 0;
+    width: 40%;
+}
+.form-control::placeholder{
+    color: rgba(255, 255, 255, 0.5);
+}
 @media (min-width: 576px) {
     .modal-dialog {
         max-width: 1000px;
@@ -250,6 +263,9 @@ body {
         transform: translateX(-50%);
         bottom: 0;
     }
+    .form-control{
+        width: 70%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -270,5 +286,11 @@ body {
     }
     .image-slider .splide__slide.is-active {
         transform: unset;
+    }
+    .form-control{
+        width: 100%;
+    }
+    .w-sm-200{
+        width: 200px;
     }
 }
