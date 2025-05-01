@@ -246,6 +246,17 @@ body {
     height: 50%;
     width: 100%;
 }
+.form-check-input[type=checkbox] {
+    border-radius: 0;
+}
+.form-check-input:focus {
+    border-color: white;
+    box-shadow: none;
+}
+.form-check-input:checked {
+    background-color: transparent;
+    border-color: white;
+}
 @media (min-width: 576px) {
     .modal-dialog {
         max-width: 1000px;
