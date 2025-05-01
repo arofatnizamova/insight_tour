@@ -3,9 +3,8 @@ $(document).ready(function() {
         const wrapper = $(this);
         const slider = wrapper.find('.splide-slider');
         const prevBtn = wrapper.find('.slider-prev')[0];
-        const nextBtn = wrapper.find('.slider-next')[0]; // Получаем DOM-элемент из jQuery-объекта
+        const nextBtn = wrapper.find('.slider-next')[0]; 
 
-        // Базовые настройки
         const options = {
             type: 'loop',
             gap: '1rem',
@@ -20,7 +19,7 @@ $(document).ready(function() {
                 interval: 4000,
                 pagination: false,
                 arrows: false,
-                perPage: 3, // Добавляем базовое значение
+                perPage: 3,
                 breakpoints: {
                     1200: {
                         perPage: 2,
@@ -39,7 +38,7 @@ $(document).ready(function() {
                 interval: 4000,
                 pagination: false,
                 arrows: false,
-                perPage: 3.8, // Добавляем базовое значение
+                perPage: 3.8, 
                 breakpoints: {
                     1600: {
                         perPage: 3,
@@ -61,7 +60,7 @@ $(document).ready(function() {
                 interval: 4000,
                 pagination: false,
                 arrows: false,
-                perPage: 3, // Добавляем базовое значение
+                perPage: 3, 
                 breakpoints: {
                     1600: {
                         perPage: 2.5,
@@ -78,24 +77,16 @@ $(document).ready(function() {
                 },
             };
         }
-
-        // Объединяем настройки
         const finalOptions = {...options, ...extraOptions };
-
-        // Инициализация Splide
         const splide = new Splide(slider[0], finalOptions);
 
-        // Кастомные стрелки (если есть)
-        // Привязка кастомных стрелок
         if (prevBtn) prevBtn.addEventListener('click', () => splide.go('-1'));
         if (nextBtn) nextBtn.addEventListener('click', () => splide.go('+1'));
 
-        // Прогресс-бар
         function updateCaptionAndProgress() {
             const progress = ((splide.index + 1) / splide.length) * 100;
             wrapper.find('.custom-progress').css('--progress', progress + '%');
         }
-
         splide.on('mounted move', updateCaptionAndProgress);
         splide.mount();
     });
